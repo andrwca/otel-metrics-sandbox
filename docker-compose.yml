@@ -1,0 +1,28 @@
+version: '3.4'
+
+networks:
+  local-network:
+    ipam:
+      config:
+        - subnet: 1.0.0.0/16
+  
+services:
+
+  otel_collector:
+    image: otel/opentelemetry-collector-contrib
+    volumes:
+      - ${OTEL_CONFIG_SRC:-./otel-collector-config-connector.yml}:/etc/otelcol/otel-collector-config.yml
+    command: --config /etc/otelcol/otel-collector-config.yml
+    ports:
+      - 43170:4317
+      - 55680:55680
+    networks:
+      - local-network
+
+  telemetrytesting:
+    image: ${DOCKER_REGISTRY-}telemetrytesting
+    build:
+      context: .
+      dockerfile: TelemetryTesting/Dockerfile
+    networks:
+      - local-network

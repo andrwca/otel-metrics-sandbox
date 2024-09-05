@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35201.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelemetryTesting", "TelemetryTesting\TelemetryTesting.csproj", "{A4522F4A-3BC0-46AE-B367-AA479CB17EA6}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D6A01375-ED5F-4495-A49B-E18BEBB32DD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4522F4A-3BC0-46AE-B367-AA479CB17EA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4522F4A-3BC0-46AE-B367-AA479CB17EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4522F4A-3BC0-46AE-B367-AA479CB17EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4522F4A-3BC0-46AE-B367-AA479CB17EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6A01375-ED5F-4495-A49B-E18BEBB32DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6A01375-ED5F-4495-A49B-E18BEBB32DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6A01375-ED5F-4495-A49B-E18BEBB32DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6A01375-ED5F-4495-A49B-E18BEBB32DD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02B29336-9092-4FBD-A1DD-193F5B642A40}
+	EndGlobalSection
+EndGlobal

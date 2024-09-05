@@ -1,0 +1,32 @@
+# configure the otel collector to take input and output to jaeger
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+exporters:
+  azuremonitor:
+    connection_string: "<azure app insights connection string>"
+
+processors:
+  batch:
+
+  resource:
+    attributes:
+      - action: insert
+        key: loki.resource.labels
+        value: test
+
+service:
+  telemetry:
+    logs:
+      level: "debug"
+  pipelines:
+     metrics:
+       receivers: [otlp]
+       processors: [batch]
+       exporters: [azuremonitor]
+

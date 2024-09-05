@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TelemetryTesting": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
